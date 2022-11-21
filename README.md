@@ -90,10 +90,10 @@
 ## 4.0 모든 모듈의 생성을 관리하는 `DIContainer` 설계하기 
 - 프로그램에서 사용되는 모듈들이 생성되는 역할 을 한군데에 몰아서 관리된다면 기능추가, 삭제시 유지보수가 쉽게 진행될수 있다고 생각해서 `DIContainer` 를 설계했습니다. 
 - 현 프로그램의 DIContainer 가 제시하는 `key point` 는 `Input`, `Output` 을 관리하는 가장 핵심 묘듈 `InputController` 와 `MenuController` 을 생성하는것입니다. 
-- 따라서 `InputController` 과 `MenuController` 를 생성하기 위해서 필요한 요소들의 initalization 메소드를 전부 포함하고 있습니다. 
+- 따라서 `InputController` 와 `MenuController` 를 생성하기 위해서 필요한 요소들의 initalization 메소드를 전부 포함하고 있습니다. 
 
 ## 5.0 프로그램의 흐름을 관리하는 `FlowCoordinator` 설계하기
-- `DIContainer` 는 프로그램의 흐름을 관리하는 `FlowCoordinator` 또한 생성해주는데, 이는 사용자가 와 프로그램의 사이의 흐름을 관리해주기 위해 사용됩니다. 
+- `DIContainer` 는 프로그램의 흐름을 관리하는 `FlowCoordinator` 또한 생성해주는데, 이는 사용자 와 프로그램 사이의 흐름을 관리해주기 위해 사용됩니다. 
 - `start` 라는 함수내에 흐름을 제어하는 코드를 작성하여 프로그램의 흐름을 관리할수 있습니다. 
 
 ## 6.0 Unit Test 의 고민과 적용 (진행중) 

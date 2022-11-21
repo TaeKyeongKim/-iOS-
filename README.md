@@ -75,6 +75,7 @@
 
 - 3.0 `MenuController` 내부에 있는 `Printer` 는 사용자 Input 이 처리되가는 과정을 `Console` 로 표시하게 됩니다.  
 
+----
 
 ## 3.0 사용자가 선택할수 있는 Menu 의 종류, 개수를 손쉽게 수정할수 있게 설계하기.
 
@@ -86,18 +87,22 @@
 - 따라서 만일 추가되는 뷰가 생긴다면, `MenuDescribable` 을 채택한 새로운 뷰를 생성하고, `menuOption` 의 case 를 더해준다면 간편하게 수정이 가능하게됩니다.
 ![image](https://user-images.githubusercontent.com/36659877/203156832-994e8db7-2c14-41bd-95f4-13d3d4cea3a0.png)
 
+----
 
 ## 4.0 모든 모듈의 생성을 관리하는 `DIContainer` 설계하기 
 - 프로그램에서 사용되는 모듈들이 생성되는 역할 을 한군데에 몰아서 관리된다면 기능추가, 삭제시 유지보수가 쉽게 진행될수 있다고 생각해서 `DIContainer` 를 설계했습니다. 
 - 현 프로그램의 DIContainer 가 제시하는 `key point` 는 `Input`, `Output` 을 관리하는 가장 핵심 묘듈 `InputController` 와 `MenuController` 을 생성하는것입니다. 
 - 따라서 `InputController` 와 `MenuController` 를 생성하기 위해서 필요한 요소들의 initalization 메소드를 전부 포함하고 있습니다. 
+----
 
 ## 5.0 프로그램의 흐름을 관리하는 `FlowCoordinator` 설계하기
 - `DIContainer` 는 프로그램의 흐름을 관리하는 `FlowCoordinator` 또한 생성해주는데, 이는 사용자 와 프로그램 사이의 흐름을 관리해주기 위해 사용됩니다. 
 - `start` 라는 함수내에 흐름을 제어하는 코드를 작성하여 프로그램의 흐름을 관리할수 있습니다. 
+----
 
 ## 6.0 Unit Test 의 고민과 적용 (진행중) 
 
+----
 
 ## 고민과 해결 (진행중) 
 

@@ -14,7 +14,7 @@
 		B7437E71292658C1006E3553 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7437E70292658C1006E3553 /* main.swift */; };
 		B7437E7B2926590D006E3553 /* MenuController .swift in Sources */ = {isa = PBXBuildFile; fileRef = B7437E7A2926590D006E3553 /* MenuController .swift */; };
 		B7437E7D29266181006E3553 /* InputProcessable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7437E7C29266181006E3553 /* InputProcessable.swift */; };
-		B7437E8129267C1D006E3553 /* DefualtInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7437E8029267C1D006E3553 /* DefualtInputValidator.swift */; };
+		B7437E8129267C1D006E3553 /* DefualtInputProcesser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7437E8029267C1D006E3553 /* DefualtInputProcesser.swift */; };
 		B7437E8329267C4A006E3553 /* InputErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7437E8229267C4A006E3553 /* InputErrors.swift */; };
 		B7437E8629268BB6006E3553 /* Printer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7437E8529268BB6006E3553 /* Printer.swift */; };
 		B7437E8829268EE0006E3553 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7437E8729268EE0006E3553 /* MenuOption.swift */; };
@@ -56,7 +56,7 @@
 		B7437E70292658C1006E3553 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B7437E7A2926590D006E3553 /* MenuController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuController .swift"; sourceTree = "<group>"; };
 		B7437E7C29266181006E3553 /* InputProcessable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputProcessable.swift; sourceTree = "<group>"; };
-		B7437E8029267C1D006E3553 /* DefualtInputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefualtInputValidator.swift; sourceTree = "<group>"; };
+		B7437E8029267C1D006E3553 /* DefualtInputProcesser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefualtInputProcesser.swift; sourceTree = "<group>"; };
 		B7437E8229267C4A006E3553 /* InputErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputErrors.swift; sourceTree = "<group>"; };
 		B7437E8529268BB6006E3553 /* Printer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Printer.swift; sourceTree = "<group>"; };
 		B7437E8729268EE0006E3553 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				B7437E7C29266181006E3553 /* InputProcessable.swift */,
-				B7437E8029267C1D006E3553 /* DefualtInputValidator.swift */,
+				B7437E8029267C1D006E3553 /* DefualtInputProcesser.swift */,
 				B7437E8229267C4A006E3553 /* InputErrors.swift */,
 			);
 			path = InputValidation;
@@ -334,7 +334,7 @@
 				B7DBB2A52927CE4D006656EF /* FlowCoordinator.swift in Sources */,
 				B7DBB2952926AAF7006656EF /* DeleteStudentView.swift in Sources */,
 				B7437E7B2926590D006E3553 /* MenuController .swift in Sources */,
-				B7437E8129267C1D006E3553 /* DefualtInputValidator.swift in Sources */,
+				B7437E8129267C1D006E3553 /* DefualtInputProcesser.swift in Sources */,
 				B7DBB2B42927F82C006656EF /* MenuViewModel.swift in Sources */,
 				B7437E7D29266181006E3553 /* InputProcessable.swift in Sources */,
 				B7437E71292658C1006E3553 /* main.swift in Sources */,

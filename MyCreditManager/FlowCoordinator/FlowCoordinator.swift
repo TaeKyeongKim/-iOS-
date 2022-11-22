@@ -7,17 +7,6 @@
 
 import Foundation
 
-final class MyCreditManager {
-  
-  let diContainer = DIContainer()
-  
-  func start() {
-    let flow = diContainer.makeFlowCoordinator()
-    flow.start()
-  }
-
-}
-
 final class FlowCoordinator {
   
   let inputController: InputController

@@ -30,13 +30,9 @@ final class FlowCoordinator {
   
   func start() {
     while true {
-      outputController.displayOpeningPhrase()
-      let userInput = inputController.read()
-      
-      
-      self.processInput(userInput)
+      outputController.displayOpeningPhrase()  
       self.processInput(inputController.read())
-      
+      self.processInput(inputController.read())
     }
   }
   

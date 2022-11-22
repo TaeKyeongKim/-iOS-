@@ -126,6 +126,6 @@
   
   - 만약 Persistent 를 `UserDefault` 를 사용해서 데이터 를 직접관리 (학생 추가, 학생 삭제 등) 해주었더라면 더욱 명확한 `Usecase` 를 제시할수 있었을것 같습니다. 
   
-  - 따라서 앞으로 Persistent Layer 의 `Storage` 를 수정해서 더 명확한 `Usecase` 를 제시한다면 현재 `Presentation Layer` 에 존재하는 핵심로직인 `Domain Layer` 로 이동하며 
+  - 따라서 앞으로 Persistent Layer 의 `Storage` 를 수정해서 더 명확한 `Usecase` 를 제시한다면 현재 `Presentation Layer` 에 존재하는 핵심로직이 `Domain Layer` 로 이동하며 
   더욱 `Clean Architecture` 방향에 맞는 프로그램을 만들수 있을것 같습니다.
 

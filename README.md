@@ -104,14 +104,28 @@
 
 ----
 
-## 고민과 해결 (진행중) 
+## 고민과 해결 
 
-<details> 
-  <summary> Input, Output 모듈로 나누어 프로젝트 설계하기 </summary> 
+  ### Usecase 바로잡기 (프로젝트의 한계) 
+  
+  > 문제 
+  
+  - Usecase 는 `Presentation Layer` 에서 사용자의 인풋을 받아 `Domain`, `Data Layer` 까지 전해지는 사용자의 행동을 표현하는 시나리오 입니다. 
 
-</details>
+  - 하지만 현 프로젝트는 Data persistent 를 관리하는 역할인 `Data Layer` 의 존재가 없기 때문에 각 메뉴의 행위의 결과를 서버, 혹은 local DB 에 데이터를 저장할 필요가 없습니다.
+  
+  - 그럼에도 불구하고 저는 프로그램 실행때마다 입력되는 사용자 값을 `JSON` 파일로 local disk 에 캐시를 하여 데이터의 변화가 일어날때마다 캐싱 되어있는 데이터를 업데이트 해주는 `Save`, `Fetch` Usecase 를 정의 해주었습니다. 
+  
+  - JSON 으로 되어있는 데이터 캐싱방법은 데이터를 추가, 삭제, 편집 할때 굉장히 힘들었기 때문에 `읽고`,`다시쓰기` 두 operation 만 진행 하여 프로그램 자체가 주가되어 데이터를 관리 하게 해주었습니다.  
+  
+  - 따라서 원래 계획은 각 메뉴에 맞는 `Usecase` 를 설정해서 이것만 보아도 어떤 프로그램인지 짐작할수 있는 프로그램을 만드는것이였는데 `Save`, 와 `Fetch` Usecase 만 존재함으로 다른사람이 보았을때 어떤 역할을 하는 시스템인지 판단하기 힘들어 졌습니다.   
+  
+  > 해결 방안 
+  
+  - JSON 으로 되어있는 데이터 캐싱방법은 데이터가 모두 String 으로 되어 있기 때문에 원하는 `record` 에 추가, 삭제, 편집 할때 굉장히 힘들다는것을 깨달았습니다. 
+  
+  - 만약 Persistent 를 `UserDefault` 를 사용해서 데이터 를 직접관리 (학생 추가, 학생 삭제 등) 해주었더라면 더욱 명확한 `Usecase` 를 제시할수 있었을것 같습니다. 
+  
+  - 따라서 앞으로 Persistent Layer 의 `Storage` 를 수정해서 더 명확한 `Usecase` 를 제시한다면 현재 `Presentation Layer` 에 존재하는 핵심로직인 `Domain Layer` 로 이동하며 
+  더욱 `Clean Architecture` 방향에 맞는 프로그램을 만들수 있을것 같습니다.
 
-<details> 
-  <summary> Usecase 바로잡기 </summary> 
-
-</details>

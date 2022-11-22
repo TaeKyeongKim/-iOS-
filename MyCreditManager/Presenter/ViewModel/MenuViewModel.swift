@@ -14,9 +14,9 @@ final class MenuViewModel {
   var saveCurrentCreditUsecase: SaveCurrentCredit
   var fetchCreditUsecase: FetchCredit
   
-  init(manipulateCreditUsecase: SaveCurrentCredit,
+  init(saveCurrentCreditUsecase: SaveCurrentCredit,
        viewCreditUsecase: FetchCredit) {
-    self.saveCurrentCreditUsecase = manipulateCreditUsecase
+    self.saveCurrentCreditUsecase = saveCurrentCreditUsecase
     self.fetchCreditUsecase = viewCreditUsecase
   }
   

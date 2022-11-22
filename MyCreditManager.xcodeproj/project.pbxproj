@@ -33,6 +33,7 @@
 		B7DBB2B42927F82C006656EF /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DBB2B32927F82C006656EF /* MenuViewModel.swift */; };
 		B7F2F1DC292B846500A77627 /* LocalCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F2F1DB292B846500A77627 /* LocalCacheManager.swift */; };
 		B7F2F1DE292BABCF00A77627 /* FetchCreditUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F2F1DD292BABCF00A77627 /* FetchCreditUsecase.swift */; };
+		B7F2F1E8292CAF6B00A77627 /* CreditManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F2F1E7292CAF6B00A77627 /* CreditManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -75,6 +76,7 @@
 		B7DBB2B32927F82C006656EF /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		B7F2F1DB292B846500A77627 /* LocalCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalCacheManager.swift; sourceTree = "<group>"; };
 		B7F2F1DD292BABCF00A77627 /* FetchCreditUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCreditUsecase.swift; sourceTree = "<group>"; };
+		B7F2F1E7292CAF6B00A77627 /* CreditManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				B7437E70292658C1006E3553 /* main.swift */,
+				B7F2F1E7292CAF6B00A77627 /* CreditManager.swift */,
 				B7F2F1E5292BFCD600A77627 /* DIContainer */,
 				B7F2F1E6292BFCEF00A77627 /* FlowCoordinator */,
 				B7437E7E29266186006E3553 /* Helpers */,
@@ -341,6 +344,7 @@
 				B7437E8329267C4A006E3553 /* InputErrors.swift in Sources */,
 				B7DBB2932926AACF006656EF /* ManipulateCreditUsecase.swift in Sources */,
 				B7DBB2AF2927F570006656EF /* AddStudentView.swift in Sources */,
+				B7F2F1E8292CAF6B00A77627 /* CreditManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

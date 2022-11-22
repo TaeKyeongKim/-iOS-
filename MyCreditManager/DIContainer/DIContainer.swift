@@ -29,7 +29,7 @@ final class DIContainer {
   
   //MARK: ViewModel
   func makeViewModel() -> MenuViewModel {
-    return MenuViewModel(manipulateCreditUsecase: makeSaveCurrentCreditUsecase(), viewCreditUsecase: viewCreditUsecase())
+    return MenuViewModel(saveCurrentCreditUsecase: makeSaveCurrentCreditUsecase(), viewCreditUsecase: makeFetchCreditUsecase())
   }
   
   //MARK: Usecases
@@ -37,7 +37,7 @@ final class DIContainer {
     return SaveCurrentCreditUsecase(repository: makeCreditRepsitory())
   }
 
-  func viewCreditUsecase() -> FetchCredit {
+  func makeFetchCreditUsecase() -> FetchCredit {
     return FetchCreditUsecase(repository: makeCreditRepsitory())
   }
   

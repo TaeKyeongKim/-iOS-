@@ -110,7 +110,7 @@
   
   > 문제 
   
-  - Usecase 는 `Presentation Layer` 에서 사용자의 인풋을 받아 `Domain`, `Data Layer` 까지 전해지는 사용자의 행동을 표현하는 시나리오 입니다. 
+  - Usecase 는 `Presentation Layer` 에서 사용자의 인풋을 받아 `Domain`, `Data Layer` 까지 전해지는 사용자의 행동을 표현하는 시나리오 이고 `Clean Architecture` 의 가장 중요한 요소중 하나입니다. 
 
   - 하지만 현 프로젝트는 Data persistent 를 관리하는 역할인 `Data Layer` 의 존재가 없기 때문에 각 메뉴의 행위의 결과를 서버, 혹은 local DB 에 데이터를 저장할 필요가 없습니다.
   

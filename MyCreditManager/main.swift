@@ -9,7 +9,3 @@ import Foundation
 
 let manager = MyCreditManager()
 manager.start()
-
-
-
-

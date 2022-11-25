@@ -17,7 +17,7 @@ struct InputReader: InputReadable {
     let input = readLine()!
     if let exit = MenuOption.init(rawValue: input.components(separatedBy: .whitespaces).joined().uppercased()),
        exit == .exit {
-      completion(true)
+      completion(false)
     }
     return input
   }

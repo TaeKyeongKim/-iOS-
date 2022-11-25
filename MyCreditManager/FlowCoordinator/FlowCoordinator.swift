@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class FlowCoordinator {
+struct FlowCoordinator {
   
   let inputController: InputController
   let outputController: MenuController
@@ -18,14 +18,23 @@ final class FlowCoordinator {
   }
   
   func start() {
+    
     while true {
-      outputController.displayOpeningPhrase()  
-      self.processInput(inputController.read())
-      self.processInput(inputController.read())
+      outputController.displayOpeningPhrase()
+      var `continue` = true
+      while `continue` {
+        let input = inputController.read { if !$0 {exit(0)} }
+        self.processInput(input) { isFinished in
+          if isFinished {
+            `continue` = false
+          }
+        }
+      }
     }
   }
   
-  private func processInput(_ userInput: String) {
-    outputController.proceedUserInput(on: userInput)
+  private func processInput(_ userInput: String, completion: (Bool) -> Void) {
+    outputController.proceedUserInput(on: userInput, completion: completion)
   }
+    
 }

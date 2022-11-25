@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MyCreditManager {
+struct MyCreditManager {
   
   let diContainer = DIContainer()
   

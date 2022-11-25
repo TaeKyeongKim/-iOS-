@@ -64,24 +64,27 @@ final class MenuController {
   
   
   //MARK: 사용자가 메뉴 번호를 입력했을때, 등록되어있는 메뉴 번호에 해당하는지 확인해주는 로직.
-  private func processMenuSelection(on input: String) {
+  private func processMenuSelection(on input: String, completion: (Bool) -> Void) {
     if let menuView = menuView.first(where: { $0.menuOption.rawValue == input }) {
       self.selectedMenu = menuView.menuOption
     }else {
       self.errorMessage = .menuInputError
+      completion(true)
     }
   }
   
   //MARK: 사용자가 메뉴 번호를 입력한뒤의 input 을 실행하는 로직.
-  private func proceedRequest(on input: String, currentMenu: MenuOption) {
+  private func proceedRequest(on input: String, currentMenu: MenuOption, completion: (Bool) -> Void) {
     inputProcesser.parseInput(val: input, currentMenu: currentMenu) { result in
       switch result {
       case .success(let parsedInput):
         viewModel.proceed(on: currentMenu, parsedInput: parsedInput) { message in
           display(message)
         }
+        completion(true)
       case .failure(let error):
         self.errorMessage = error
+        completion(true)
       }
     }
     selectedMenu = nil
@@ -100,11 +103,11 @@ extension MenuController {
     display(openingPhrase)
   }
   
-  func proceedUserInput(on input: String) {
+  func proceedUserInput(on input: String, completion: (Bool) -> Void) {
     if let currentMenu = selectedMenu {
-      proceedRequest(on: input, currentMenu: currentMenu)
+      proceedRequest(on: input, currentMenu: currentMenu, completion: completion)
     }else {
-      processMenuSelection(on: input)
+      processMenuSelection(on: input, completion: completion)
     }
   }
 

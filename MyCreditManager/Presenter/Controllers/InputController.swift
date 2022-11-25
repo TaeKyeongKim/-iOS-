@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class InputController {
+struct InputController {
   
   let inputReader: InputReadable
 
@@ -15,12 +15,12 @@ final class InputController {
     self.inputReader = inputReader
   }
 
-  func read() -> String {
-    return readUserInput()
+  func read(completion:(Bool) -> Void) -> String {
+    return readUserInput(completion: completion)
   }
 
-  private func readUserInput() -> String {
-    let userInput = inputReader.read { if $0 {exit(0)} }
+  private func readUserInput(completion: (Bool) -> Void) -> String {
+    let userInput = inputReader.read { completion($0) }
     return userInput
   }
   

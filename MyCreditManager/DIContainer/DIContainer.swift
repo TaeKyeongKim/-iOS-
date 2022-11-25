@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class DIContainer {
+struct DIContainer {
 
   //MARK: Controllers
   func makeInputController() -> InputController {

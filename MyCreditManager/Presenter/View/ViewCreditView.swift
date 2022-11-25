@@ -7,15 +7,16 @@
 
 import Foundation
 
-final class ViewCreditView: MenuDescribable {
+struct ViewCreditView: MenuDescribable {
   
   var menuOption: MenuOption
-  lazy var title: String = {
+  var title: String {
     return menuOption.title
-  }()
-  lazy var description: String = {
+  }
+  
+  var description: String {
     return menuOption.description
-  }()
+  }
   
   init(option: MenuOption = .viewCredit) {
     self.menuOption = option

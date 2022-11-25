@@ -7,15 +7,15 @@
 
 import Foundation
 
-final class AddStudentView: MenuDescribable {
+struct AddStudentView: MenuDescribable {
   
   var menuOption: MenuOption
-  lazy var title: String = {
+   var title: String {
     return menuOption.title
-  }()
-  lazy var description: String = {
+  }
+   var description: String  {
     return menuOption.description
-  }()
+  }
 
   init(option: MenuOption = .addStudent) {
     self.menuOption = option

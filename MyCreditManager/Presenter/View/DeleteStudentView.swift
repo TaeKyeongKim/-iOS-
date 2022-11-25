@@ -7,16 +7,15 @@
 
 import Foundation
 
-final class DeleteStudentView: MenuDescribable {
+struct DeleteStudentView: MenuDescribable {
   
   var menuOption: MenuOption
-  lazy var title: String = {
+  var title: String {
     return menuOption.title
-  }()
-  lazy var description: String = {
+  }
+  var description: String {
     return menuOption.description
-  }()
-  
+  }
   init(option: MenuOption = .deleteStudent) {
     self.menuOption = option
   }

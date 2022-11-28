@@ -1,8 +1,5 @@
 ## MyCreditManager [원티드 프리온보딩 챌린지 iOS과정 사전과제]
 
-## 요구사항 
-- [사전과제 링크](https://yagomacademy.notion.site/iOS-ba2d0c0bb0b949c896cc28567706e969) 를 통해 자세한 요구사항을 확인 하실수 있습니다. 
-
 ## 이루고자 했던 목표
 - 1.0 `Clean Architecture` 를 적용하여 Presentation, Data Layer 가 바뀌어도 설계한 Domain Layer 을 가지고 어떤 플렛폼이든 적용가능한 코드를 작성하는것. 
 - 2.0 `Input` 과 `Output` 모듈로 나누어 프로젝트 설계 하여 모듈간의 `단일책임 원칙` 을 지키는것. 
